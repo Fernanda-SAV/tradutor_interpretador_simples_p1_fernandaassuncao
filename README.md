@@ -13,17 +13,31 @@ Trabalho submetido à disciplina de Compiladores - Um simples tradutor à um sim
 
 ## Resumo do Trabalho
 
-> **Este projeto apresenta o desenvolvimento 
+> Este projeto apresenta o desenvolvimento de um simples tradutor a um simples interpretador simples baseados em uma abordagem de Tradução Dirigida por Sintaxe.
+O sistema foi implementado em Java, com o objetivo de demonstrar os princípios fundamentais de análise sintática e semântica utilizados na construção de compiladores.
+A partir de uma gramática simplificada, o tradutor converte expressões aritméticas e comandos básicos (como atribuição e impressão) em uma sequência de instruções intermediárias, que posteriormente são executadas por um interpretador.
 
 ## Descrição
-> ** iajosdj
-- **isjod
+> O projeto foi dividido em duas partes principais: o tradutor (Parser e Scanner) e o interpretador.
+- Tradutor:
+  - Responsável por ler e analisar a estrutura sintática de um programa simples. 
+  - Identifica tokens (como let, print, números, identificadores e operadores). 
+  - Gera um código intermediário em formato de instruções, simulando uma tradução dirigida por sintaxe.
+- Interpretador:
+  - Lê as instruções intermediárias geradas pelo tradutor.
+  - Executa operações aritméticas, armazena e recupera variáveis, e imprime resultados. 
+  - Implementado utilizando pilha de execução e tabela de variáveis (HashMap).
 
 ## Estrutura do Repositório
 
-- **`/apresentacoes/`**: Apresentações relacionadas
-- **`/docs/`**: Documentações adicionais - contém a explicação do código.
-- **`/src/`**: Contém o código d
+- **`/src/`**: Contém o código da construção do Tradutor ao Interpretador.
+- **`/src/Main.java`**: Classe principal de execução
+- **`/src/Parser.java`**: Tradutor que converte código-fonte em instruções intermediárias
+- **`/src/Scanner.java`**: Analisador léxico responsável por gerar tokens
+- **`/src/Token.java`**: Representação de um token (tipo e lexema)
+- **`/src/TokenType.java`**: Enumeração dos tipos de tokens
+- **`/src/Interpretador.java`**: Executa as instruções geradas pelo Parser
+
 ---
 
 ## Autora
