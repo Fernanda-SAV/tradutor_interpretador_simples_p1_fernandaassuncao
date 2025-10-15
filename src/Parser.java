@@ -15,6 +15,20 @@ public class Parser {
         }
     }
 
+    void oper () {
+        if (peek() == '+') {
+            match('+');
+            digit();
+            System.out.println("add");
+            oper();
+        } else if (peek() == '-') {
+            match('-');
+            digit();
+            System.out.println("sub");
+            oper();
+        }
+    }
+
     void expr() {
         digit();
         oper();
