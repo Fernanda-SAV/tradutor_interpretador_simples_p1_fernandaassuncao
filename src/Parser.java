@@ -6,7 +6,7 @@ public class Parser {
         this.input = input;
     }
 
-    void digit () {
+    private void digit () {
         if (Character.isDigit(peek())) {
             System.out.println("push " + peek());
             match(peek());
@@ -15,7 +15,7 @@ public class Parser {
         }
     }
 
-    void oper () {
+    private void oper () {
         if (peek() == '+') {
             match('+');
             digit();
