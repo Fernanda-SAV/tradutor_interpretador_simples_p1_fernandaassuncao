@@ -6,6 +6,20 @@ public class Parser {
         this.input = input;
     }
 
+    void digit () {
+        if (Character.isDigit(peek())) {
+            System.out.println("push " + peek());
+            match(peek());
+        } else {
+            throw new Error("syntax error");
+        }
+    }
+
+    void expr() {
+        digit();
+        oper();
+    }
+
     public void parse () {
         // aqui ainda ira o código
     }
