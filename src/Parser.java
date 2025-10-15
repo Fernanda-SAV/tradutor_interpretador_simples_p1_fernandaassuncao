@@ -1,4 +1,4 @@
-public class Parser {
+/*public class Parser {
     private Scanner scan;
     private char currentToken;
 
@@ -60,4 +60,4 @@ public class Parser {
             throw new Error("syntax error");
         }
     }
-}
+}*/
